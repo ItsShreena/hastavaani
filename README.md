@@ -1,4 +1,4 @@
- #HastaVaani — AI-Powered Sign Language Communication Assistant
+# 🤟 HastaVaani — AI-Powered Sign Language Communication Assistant
  
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3.8+-blue?style=for-the-badge&logo=python&logoColor=white" />
@@ -7,7 +7,7 @@
   <img src="https://img.shields.io/badge/Streamlit-Dashboard-red?style=for-the-badge&logo=streamlit&logoColor=white" />
   <img src="https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge" />
 </p>
-> **HastaVaani**- A real-time hand gesture recognition system that converts sign language into speech, bridging communication gaps for the hearing and speech impaired.
+> **HastaVaani** (हस्तवाणी) — *"Hasta"* means hand, *"Vaani"* means voice. A real-time hand gesture recognition system that converts sign language into speech, bridging communication gaps for the hearing and speech impaired.
  
 ---
  
@@ -228,15 +228,3 @@ Contributions are welcome! Here's how you can help:
  
 This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
  
----
- 
-## 🙏 Acknowledgements
- 
-- [MediaPipe](https://mediapipe.dev/) by Google for the hand landmark model
-- [OpenCV](https://opencv.org/) for computer vision utilities
-- [pyttsx3](https://pyttsx3.readthedocs.io/) for offline text-to-speech
----
- 
-<p align="center">
-  Made with ❤️ to make communication more accessible for everyone.
-</p>
