@@ -1,4 +1,4 @@
-# HastaVaani — AI-Powered Sign Language Communication Assistant
+#  HastaVaani — AI-Powered Sign Language Communication Assistant
  
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3.8+-blue?style=for-the-badge&logo=python&logoColor=white" />
@@ -7,8 +7,34 @@
   <img src="https://img.shields.io/badge/Streamlit-Dashboard-red?style=for-the-badge&logo=streamlit&logoColor=white" />
   <img src="https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge" />
 </p>
-> **HastaVaani** — *"Hasta"* means hand, *"Vaani"* means voice. A real-time hand gesture recognition system that converts sign language into speech, bridging communication gaps for the hearing and speech impaired.
+> **HastaVaani** (हस्तवाणी) — *"Hasta"* means hand, *"Vaani"* means voice.
  
+### The Problem
+ 
+Over 63 million people in India alone live with significant hearing or speech impairment. For many of them, sign language is the primary — and often only — means of natural communication. Yet most people around them don't understand it, creating an everyday barrier in hospitals, schools, workplaces, and public spaces.
+ 
+Existing solutions are either too expensive, require specialised hardware, or depend on a human interpreter being physically present. **HastaVaani was built to remove that dependency** — giving individuals a portable, affordable, and instant voice using nothing more than a webcam and a laptop.
+ 
+### Who It's For
+ 
+- 🧏 **Deaf and hard-of-hearing individuals** who use sign language to communicate
+- 🗣️ **Non-verbal or speech-impaired users** who rely on hand gestures
+- 🏥 **Healthcare & support workers** who need a quick communication bridge with patients
+- 🏫 **Educators and students** exploring assistive technology and AI accessibility tools
+### How It Works
+ 
+HastaVaani processes each webcam frame through a three-stage pipeline:
+ 
+```
+Webcam Frame  →  Hand Landmark Detection  →  Gesture Classification  →  Sentence Building  →  Speech Output
+    (OpenCV)          (MediaPipe, 21 pts)      (Rules + Random Forest)     (sentence_builder)      (pyttsx3)
+```
+ 
+1. **Capture** — OpenCV reads frames from the webcam in real time.
+2. **Detect** — MediaPipe identifies 21 hand keypoints (landmarks) per frame, tracking the precise position of every finger joint.
+3. **Classify** — A combination of rule-based logic and a trained Random Forest model maps landmark geometry to a named gesture (e.g. `HELLO`, `STOP`, `LOVE`). Motion gestures like `BYE` additionally track landmark movement across frames.
+4. **Build** — Stable, confirmed gestures are passed to the sentence builder, which groups tokens into natural, readable sentences.
+5. **Speak** — The completed sentence is fed to `pyttsx3` for immediate offline text-to-speech playback, with no internet connection required.
 ---
  
 ## 📖 Table of Contents
@@ -228,3 +254,4 @@ Contributions are welcome! Here's how you can help:
  
 This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
  
+
