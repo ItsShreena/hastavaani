@@ -1,0 +1,10 @@
+def save_history(history):
+
+    with open(
+        "data/conversation_history.txt",
+        "w",
+        encoding="utf-8"
+    ) as f:
+
+        for item in history:
+            f.write(item + "\n")

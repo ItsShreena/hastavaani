@@ -1,0 +1,15 @@
+LOG_FILE = "logs/conversation_log.csv"
+
+try:
+    with open(LOG_FILE, "x", newline="") as file:
+
+        writer = csv.writer(file)
+
+        writer.writerow([
+            "Timestamp",
+            "Gestures",
+            "Sentence"
+        ])
+
+except FileExistsError:
+    pass
